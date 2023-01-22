@@ -23,10 +23,7 @@
         </tr>
     </table>
 
-<!--    <p th:text="'I\'m ' + ${user.getAge()} + ' years old. I\'m professional ' + ${user.getProfession()} + '.'"/>-->
-<!--    <div th:text="'And I am' + (${user.isHasBrains()} ? ' not so' : '')  + ' smart'"/>-->
     <div th:if="${authenticatedUser.hasRole('ROLE_ADMIN')}">
-<!--        <a href="/admin"  >Go Back</a>-->
 
         <form action="/admin">
             <button type="submit">Назад</button>
@@ -36,7 +33,6 @@
         <form th:method="POST" th:action="@{/admin/edit/{id}(id=${user.getId()})}">
             <button type="submit">Редактировать</button>
         </form>
-<!--        <a th:href="@{/admin/edit/{id}(id=${user.getId()})}"  >Edit</a>-->
         <form th:method="POST" th:action="@{/admin/delete/{id}(id=${user.getId()})}">
             <button
                     style="color: red"

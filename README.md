@@ -1,6 +1,6 @@
-# Task-7
-пароль для всех пользователей: pass
+# Task-7-3.1.2-Kahadar edition
+Admins password: pass
+
+hash: $2a$10$h2ZHf13XAX0vwCTe7Jbi1e5pOhhY54iJjJkmfadby05Zm0TDZ8v8C
 
 для инициализации базы запустить скрипты из db.sql
-
-хэш админского пароля годный

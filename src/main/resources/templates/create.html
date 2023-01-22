@@ -12,16 +12,9 @@
         th:action="${isCreate} ? '/admin/create' : '/admin/edit/' + ${user.getId()}"
         th:object="${user}"
         style="display: flex; flex-direction: column; width: fit-content">
-<!--    <input placeholder="Avatar URL" th:field="*{avatarURL}">-->
     <input placeholder="username" th:field="*{username}">
     <input placeholder="password" th:field="*{password}">
     <input id="name-input" placeholder="Name" min="3" maxlength="50" th:field="*{name}">
-<!--    <input placeholder="Profession" maxlength="255" th:field="*{profession}">-->
-<!--    <input placeholder="Age" type="number" max="100" min="1" th:field="*{age}">-->
-<!--    <br />-->
-<!--    <label for="hasBrains">-->
-<!--        Have brains? <input id="hasBrains" type="checkbox" th:field="*{hasBrains}">-->
-<!--    </label>-->
     <br/>
     <label for="selected_roles">
         Roles:

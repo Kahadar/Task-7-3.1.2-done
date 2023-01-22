@@ -37,19 +37,6 @@ public class User implements UserDetails {
     )
     private Set<Role> roles = new HashSet<>();
 
-//    @Column(name = "profession")
-//    private String profession;
-//
-//    @Column(name = "avatar_url")
-//    @URL(message = "Provide valid avatar URL")
-//    private String avatarURL;
-//
-//    @Column(name = "smart")
-//    private boolean hasBrains = false;
-//
-//    @Column(name = "age")
-//    @Min(value = 1, message = "Minimal age is 1")
-//    private int age;
 
     public User() {
     }
@@ -60,14 +47,6 @@ public class User implements UserDetails {
         this.password = password;
         this.roles.addAll(roles);
     }
-//    public User(Set<Role> roles, String name, String profession, String avatarURL, boolean hasBrains, int age) {
-//        this.name = name;
-//        this.roles.addAll(roles);
-//        this.profession = profession;
-//        this.hasBrains = hasBrains;
-//        this.age = age;
-//        this.avatarURL = avatarURL;
-//    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -114,61 +93,9 @@ public class User implements UserDetails {
         return true;
     }
 
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
 
     public void addAuthorities(Role ...roles) {
         this.roles.addAll(List.of(roles));
     }
 
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-
-//    public String getProfession() {
-//        return profession;
-//    }
-//
-//    public void setProfession(String profession) {
-//        this.profession = profession;
-//    }
-/*
-    public String getAvatarURL() {
-        return avatarURL;
-    }
-
-    public void setAvatarURL(String avatarURL) {
-        this.avatarURL = avatarURL;
-    }
-
-    public boolean isHasBrains() {
-        return hasBrains;
-    }
-
-    public void setHasBrains(boolean hasBrains) {
-        this.hasBrains = hasBrains;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }*/
-
-   /* @Override
-    public String toString() {
-        String pattern = "Пользователь - '%s', id - %s\nПрофессия - '%s'\nУмный? - %s\nВозраст - %d\nСтеснительный? - %s}";
-        return String.format(pattern, name, id, profession, hasBrains ? "yes" : "not much", age, avatarURL == null || avatarURL.isEmpty() ? "yes" : "вряд ли");
-    }*/
 }
